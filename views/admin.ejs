@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원 정보</title>
+</head>
+<body>
+  <h1>회원 정보 출력</h1>
+  <h3>
+    총 회원 수 --- <%= USER_DATA.length %>
+  </h3>
+  <ul>
+    <% if(USER_DATA.length <= 0) { %>
+      <li>
+        회원 정보가 없습니다.
+      </li>
+    <% } %>
+    <% for(key in USER_DATA) { %>
+      <li>
+        <p>
+          아이디 : <%= USER_DATA[key].ID_PK %>
+        </p>
+        <p>
+          이름 : <%= USER_DATA[key].NAME %>
+        </p>
+        <p>
+          닉네임 : <%= USER_DATA[key].NICKNAME %>
+        </p>
+        <p>
+          이메일 : <%= USER_DATA[key].EMAIL %>
+        </p>
+        <p>
+          전화번호 : <%= USER_DATA[key].PHONE_NUMBER %>
+        </p>
+        <p>
+          생년월일 : <%= USER_DATA[key].BIRTH %>
+        </p>
+    <% } %>
+    </li>
+  </ul>
+</body>
+</html>

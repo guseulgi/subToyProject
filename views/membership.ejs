@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>회원가입</title>
+  <!-- CSS -->
+  <link rel="stylesheet" href="/css/membership.css" />
+</head>
+<body>
+  <h1>회원가입</h1>
+  <form action="/memberships" method="post" class="membershipForm">
+    <fieldset class="field">
+      <legend>이름</legend>
+      <input type="text" name="name" required/>
+    </fieldset>
+    <fieldset class="field">
+      <legend>닉네임</legend>
+      <input type="text" name="nickname" required/>
+    </fieldset>
+    <fieldset class="field">
+      <legend>아이디</legend>
+      <input type="text" name="id" required/>
+    </fieldset>
+    <fieldset class="field">
+      <legend>비밀번호</legend>
+      <input type="password" name="password" required/>
+    </fieldset>
+    <fieldset class="field">
+      <legend>이메일</legend>
+      <input type="email" name="email" required/>
+    </fieldset>
+    <fieldset class="field">
+      <legend>주소</legend>
+      <input type="text" name="address" />
+    </fieldset>
+    <fieldset class="field">
+      <legend>생년월일</legend>
+      <input type="date" name="birth" required/>
+    </fieldset>
+    <fieldset class="field">
+      <legend>성별</legend>
+      <input type="radio" name="gender" value="male" checked/> 남성
+      <input type="radio" name="gender" value="female" /> 여성
+    </fieldset>
+    <fieldset class="field">
+      <legend>전화번호</legend>
+      <span>010 - </span><input type="text" name="phoneMiddleNumber" required/><span> - </span><input type="text" name="phoneLastNumber" required/>
+    </fieldset>
+    <button type="submit" class="btn">회원가입 하기</button>
+  </form>
+</body>
+</html>
