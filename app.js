@@ -16,7 +16,7 @@ app.set('view engine', 'ejs');
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
-app.use(cookieParser());
+app.use(cookieParser('1234'));
 app.use(
   session({
     secret: '1234',
@@ -32,6 +32,12 @@ app.use('/', mainRouter);
 app.use('/memberships', membershipRouter);
 app.use('/users', userRouter);
 app.use('/mypage', mypageRouter);
+
+app.use((err, req, res, next) => {
+  console.log(err.stack);
+  res.status(err.statusCode);
+  res.render(err.message);
+});
 
 // 서버 오픈
 app.listen(PORT, () => {

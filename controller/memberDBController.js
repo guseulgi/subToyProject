@@ -15,6 +15,23 @@ const memberDB = {
       cb(data);
     });
   },
+  addUsers: (newUser, cb) => {
+    console.log(newUser.phoneMiddleNumber, newUser.phoneLastNumber);
+    const addUserQuery = `INSERT INTO boardDB.membershipDB (ID_PK, NICKNAME, NAME, EMAIL, PASSWORD, ADDRESS, BIRTH, PHONE_NUMBER) VALUES ('${
+      newUser.id
+    }', '${newUser.nickname}', '${newUser.name}', '${newUser.email}', '${
+      newUser.password
+    }', '${newUser.address}', '${newUser.birth}', '${
+      '010-' +
+      String(newUser.phoneMiddleNumber) +
+      '-' +
+      String(newUser.phoneLastNumber)
+    }');`;
+    dbConnect.query(addUserQuery, (err, data) => {
+      if (err) throw err;
+      cb(data);
+    });
+  },
 };
 
 module.exports = memberDB;

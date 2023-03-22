@@ -8,11 +8,12 @@
 </head>
 <body>
   <h1>
+    <div class="profile-icon"></div>
     <%= findUser.NAME %> 님, 어서오세요!
   </h1>
-
-  <div>
-
+  <div class="mypage">
+    <a href="/board/<%=findUser.ID_PK%>">내 정보 수정</a>
+    <a href="/board">글목록</a>
   </div>
 </body>
 </html>

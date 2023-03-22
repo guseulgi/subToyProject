@@ -72,12 +72,58 @@ h1 {
   height: 150px;
   background-color: aliceblue;
   margin: auto;
+  position: relative;
 }
 .login-form div {
   width: 100%;
-  margin: auto;
+  position: absolute;
+  left: 35px;
 }
 .login-form div label {
-  font-size: 1.8rem;
+  font-size: 1.4rem;
   font-family: "HS-Regular";
+}
+.login-form div input {
+  padding: 4px 2px;
+}
+.login-form div.id-field {
+  top: 28%;
+}
+.login-form div.id-field input {
+  margin-left: 28px;
+}
+.login-form div.pw-field {
+  bottom: 28%;
+}
+.login-form div.pw-field input {
+  margin-left: 10px;
+}
+.login-form button {
+  width: 70px;
+  height: 70px;
+  background-color: black;
+  color: white;
+  font-size: 1.2rem;
+  font-family: "HS-Regular";
+  position: absolute;
+  right: 35px;
+  bottom: 50%;
+  transform: translateY(50%);
+  transition: 0.4s;
+}
+.login-form button:hover {
+  font-size: 1.25rem;
+  cursor: pointer;
+}
+.login-form .register-btn {
+  position: absolute;
+  bottom: 10px;
+  right: 35px;
+  text-decoration: none;
+  color: black;
+  transition: 0.3s;
+}
+.login-form .register-btn:hover {
+  font-weight: 700;
+  color: darkcyan;
 }/*# sourceMappingURL=main.css.map */
